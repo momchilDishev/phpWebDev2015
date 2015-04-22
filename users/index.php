@@ -1,6 +1,13 @@
+<form method="post" action="index.php">
+    First Name: <input type="text" name="first-name"/>
+    Last name: <input type="text" name="last-name">
+    <input type="submit" value="go"/>
+</form>
+
+
 <?php
 
-
+//var_dump($_SERVER);
 var_dump(__FILE__);
 define('DX_ROOT_DIR', dirname(__FILE__) . '/');
 define('DX_ROOT_PATH', basename(dirname(__FILE__) . '/'));
@@ -34,5 +41,5 @@ if(isset($_COOKIE['user'])){
     echo "Welcome Joe!@";
 }
 
-
 ?>
+
