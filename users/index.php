@@ -21,8 +21,9 @@ var_dump($request);
 if(!empty($request)){
     if(0===strpos($request,$request_home)){
         $request=substr($request, strlen($request_home));
-
-        var_dump($request);
+		
+		$components = explode('/', $request, 3);
+        var_dump($components);
     }
 }
 
