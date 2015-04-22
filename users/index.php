@@ -20,4 +20,19 @@ if(!empty($request)){
 }
 
 
+
+session_start();
+if(!isset($_SESSION['count'])){
+    $_SESSION['count'] =0;
+}
+
+echo "Session counter: ".++$_SESSION['count']."</br>";
+
+if(isset($_COOKIE['user'])){
+    echo "Welcome".$_COOKIE['user']."!";
+}else{
+    echo "Welcome Joe!@";
+}
+
+
 ?>
