@@ -3,11 +3,16 @@ namespace Controllers;
 
 class Master_Controller
 {
-
-    public function __construct()
+protected $layout;
+    protected $views_dir;
+    public function __construct($views_dir= '/views/artists/')
     {
-        echo "I am the master</br>";
+
+        $this->views_dir=$views_dir;
+
+        $this->layout=DX_ROOT_DIR.'/views/layouts/default.php';
     }
+
 }
 
 ?>

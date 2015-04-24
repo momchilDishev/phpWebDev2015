@@ -2,16 +2,25 @@
 
 namespace Controllers;
 
-class Artists_Controller{
+class Artists_Controller extends Master_Controller{
 
     public function __construct(){
-        echo "I am the artist</br>";
+        parent::__construct();
     }
 
-    function index(){
+    public function index(){
         echo "I am the artist's index()</br>";
+        $template_name= DX_ROOT_DIR . '/views/artists/index.php';
 
-        include_once DX_ROOT_DIR . '/views/artists/index.php';
+        include_once $this->layout;
+
+    }
+    public function second(){
+        echo "I am the second's index()</br>";
+        $template_name= DX_ROOT_DIR . '/views/artists/second.php';
+
+        include_once $this->layout;
+
     }
 }
 ?>
