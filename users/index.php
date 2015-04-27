@@ -70,7 +70,3 @@ if (isset($_COOKIE['user'])) {
     echo "Welcome Joe!@";
 }
 setcookie("user", "momo", time() +5);
-
-
-?>
-

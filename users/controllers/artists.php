@@ -23,4 +23,3 @@ class Artists_Controller extends Master_Controller{
 
     }
 }
-?>
