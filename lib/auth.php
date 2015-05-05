@@ -31,7 +31,7 @@ class Auth {
 	
 	public function login( $username, $password ) {
 		$db = \Lib\Database::get_instance();
-		$dbconn = $db->get_db();
+		$dbconn = $db::get_db();
 		
 		
 		$statement = $dbconn->prepare( "SELECT id FROM users WHERE username = ? AND password = MD5( ? ) LIMIT 1" );

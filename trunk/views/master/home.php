@@ -1,1 +1,0 @@
-Master home() function view from views/master/home.php

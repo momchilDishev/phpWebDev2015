@@ -1,6 +1,7 @@
 <?php
 
 namespace Lib;
+require_once('config/db.php');
 
 class Database {
 	
@@ -12,9 +13,8 @@ class Database {
 		$username = DB_USERNAME;
 		$password = DB_PASSWORD;
 		$database = DB_DATABASE;
-		
-		$db = new \mysqli( $host, $username, $password, $database );
-		
+		$db = mysqli_connect( $host, $username, $password, $database);
+
 		self::$db = $db;
 	}
 	

@@ -1,4 +1,4 @@
-<form method="POST">
+-------------<form method="POST">
 	<p>
 		Name: <input type="text" name="name" />
 	</p>

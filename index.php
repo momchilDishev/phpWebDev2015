@@ -80,33 +80,28 @@ if ( isset( $controller ) && file_exists( 'controllers/' . $controller . '.php' 
 
 	$master_controller->home();
 }
-
-include 'uploads/upload.php'
-?>
-
-<form action="uploads/upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
-</form>
-
-// \Lib\Auth::get_instance()->logout();
+echo "</br>";
+\Lib\Auth::get_instance()->logout();
 
 // TEST PLAYGROUND
-/* include_once 'models/artist.php';
+ include_once 'models/artist.php';
 
 $artist_model = new \Models\Artist_Model();
 
 $artists = $artist_model->find();
 
-var_dump( $artists );
-*/
+//var_dump( $artists );
 
-// include_once 'lib/auth.php';
-// $auth = \Lib\Auth::get_instance();
 
-// $logged_in = $auth->login( 'test', 'test' );
+ include_once 'lib/auth.php';
+ $auth = \Lib\Auth::get_instance();
+include_once '/views/elements/header.php';
+
+//include_once 'controllers/upload.php';
+//include_once 'views/upload/upload.php';
+ //$logged_in = $auth->login( 'test', 'test' );
 
 // var_dump($logged_in);
 
 // var_dump($_SESSION);
+
